@@ -16,8 +16,7 @@
 # limitations under the License.
 
 default['postfix']['mail_type']  = "client"
-default['postfix']['myhostname'] = fqdn
-default['postfix']['mydomain']   = domain
+default['postfix']['myhostname'] = "mail.#{node[:application][:url]}"
 default['postfix']['myorigin']   = "$myhostname"
 default['postfix']['relayhost']  = ""
 default['postfix']['mail_relay_networks']        = "127.0.0.0/8"
